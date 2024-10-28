@@ -93,7 +93,6 @@ main > section:first-of-type {
   }
 
   a {
-    margin-top: ;
     background-color: var(--primary-color);
     color: var(--white);
     padding: 0.8rem 1.1rem;
