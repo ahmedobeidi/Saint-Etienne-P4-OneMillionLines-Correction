@@ -1,3 +1,4 @@
+/* Vos customisations des classes de Bootstrap */
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 
 :root {
@@ -13,12 +14,20 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
 
 ul {
   list-style: none;
+}
+
+.container {
+  width: 1200px;
 }
 
 nav a,
@@ -41,6 +50,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 nav > ul {
@@ -52,65 +62,188 @@ nav > ul {
 }
 
 nav a {
-    color: rgb(197, 197, 197);
+  color: #a3a6a7;
 }
 
 nav a:hover {
-    color: var(--white);
-}
-
-.container {
-  width: 1200px;
+  color: var(--white);
 }
 
 main > section:first-of-type {
-    background-image: url("../images/hero-image.jpg");
+  background-image: url("../images/hero-image.jpg");
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+  color: var(--white);
+  h1 {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  div {
     display: flex;
-    justify-content: center;
-    padding: 4rem 0;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  span {
+    font-weight: 700;
+  }
+
+  a {
+    background-color: var(--primary-color);
     color: var(--white);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
+    padding: 0.8rem 1.1rem;
+    border-radius: 4px;
+    font-size: 2rem;
+    transition: background-color 0.3s;
+  }
 
-    h1 {
-        font-size: 4.5rem;
-        text-align: center;
-        margin-bottom: 1.5rem;
-    }
+  a:hover {
+    background-color: #d14033;
+  }
+}
 
-    div{
+p {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+p,
+a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+#who {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+
+  div {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  span {
+    color: var(--primary-color);
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+hr {
+  width: 160px;
+  height: 1px;
+  background-color: var(--primary-color);
+  border: none;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
+  padding-top: 10rem;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--black);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+
+  svg {
+    fill: var(--white);
+    width: 25px;
+    height: 25px;
+  }
+}
+
+#get-involved {
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  padding: 4rem 0;
+
+  > div.container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+
+      article {
+        width: 30%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
-    }
+        justify-content: space-between;
 
-    span {
-        font-weight: 700; /* = bold */
-    }
+        > div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: var(--black);
+          border-radius: 100%;
+          padding: 25px;
 
-    a {
-        background-color: var(--primary-color);
-        color: var(--white);
-        padding: 0.8rem 1.1rem;
-        border-radius: 4px;
-        font-size: 2rem;
-
-        &:hover {
-            background-color: #dc4638;
+          svg {
+            width: 75px;
+            height: 75px;
+            fill: var(--white);
+          }
         }
+      }
     }
-
+  }
 }
-
-
 
 /* Responsive Styling */
 
 @media (max-width: 1199px) {
+  .container {
+    width: 800px;
+  }
+
+  #get-involved {
+    & > div.container {
+      > div {
+        flex-direction: column;
+
+        article {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 991px) {
+  .container {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
