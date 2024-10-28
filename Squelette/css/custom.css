@@ -93,6 +93,7 @@ main > section:first-of-type {
   }
 
   a {
+    margin-top: ;
     background-color: var(--primary-color);
     color: var(--white);
     padding: 0.8rem 1.1rem;
@@ -222,6 +223,7 @@ footer {
           background-color: white;
           padding: 10px;
           font-weight: 500;
+          margin-top: 20px;
         }
       }
     }
@@ -314,5 +316,4 @@ footer {
       }
     }
   }
-
 }
